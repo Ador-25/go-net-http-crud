@@ -21,15 +21,6 @@ func GetAllTasks(rw http.ResponseWriter, r *http.Request) {
 	rw.Write(data)
 }
 
-// GetTaskByID godoc
-// @Summary Get a task by ID
-// @Description Get details of a task by ID
-// @ID get-task-by-id
-// @Produce json
-// @Param id path int true "Task ID"
-// @Success 200 {object} Task
-// @Failure 400 {object} ErrorResponse
-// @Router /tasks/{id} [get]
 func GetTask(rw http.ResponseWriter, r *http.Request) {
 	fmt.Println("function called")
 	idStr := r.URL.Query().Get("id")
